@@ -11,3 +11,16 @@ https://xd.adobe.com/view/09ddc3b0-b0bf-438c-55ef-13d096fc1be1-7fec/?hints=off
 https://docs.google.com/spreadsheets/d/1QHXfi9odKTb-zz8zFSPG3MI-DC7nFltMhjsUgnUa3tA/edit#gid=0
 - **テスト仕様書**
 - **データ仕様書**
+
+## 使用するモジュール
+- **Expo Module**
+- **react-native-navigation**
+- **react-native-maps**
+- **react-native-camera**
+- **react-native-vector-icons**
+- **react-native-lightbox**
+- **react-native-swiper**
+- **react-native-textinput-effects**
+- **lottie-react-native**
+- **react-native-acction-button**
+- **NativeBase**
