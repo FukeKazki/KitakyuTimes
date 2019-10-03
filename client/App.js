@@ -1,6 +1,17 @@
 import React from 'react';
 import { AppLoading } from 'expo';
-import { Container, Header, Body, Title, Text } from 'native-base';
+import {
+  Container,
+  Header,
+  Body,
+  Content,
+  Title,
+  Text,
+  Footer,
+  FooterTab,
+  Button,
+  Icon,
+} from 'native-base';
 import * as Font from 'expo-font';
 import { Ionicons } from '@expo/vector-icons';
 
@@ -33,6 +44,27 @@ export default class App extends React.Component {
             <Title>Developer</Title>
           </Body>
         </Header>
+        <Content />
+        <Footer>
+          <FooterTab>
+            <Button vertical>
+              <Icon name="map" />
+              <Text>Map</Text>
+            </Button>
+            <Button vertical>
+              <Icon name="camera" />
+              <Text>Camera</Text>
+            </Button>
+            <Button vertical>
+              <Icon type="AntDesign" name="form" />
+              <Text>Post</Text>
+            </Button>
+            <Button vertical>
+              <Icon name="apps" />
+              <Text>Apps</Text>
+            </Button>
+          </FooterTab>
+        </Footer>
       </Container>
     );
   }
