@@ -1,21 +1,10 @@
 import React from 'react';
 import { AppLoading } from 'expo';
-import {
-  Container,
-  Header,
-  Body,
-  Content,
-  Title,
-  Text,
-  Footer,
-  FooterTab,
-  Button,
-  Icon,
-} from 'native-base';
 import * as Font from 'expo-font';
 import { Ionicons } from '@expo/vector-icons';
+import AppNavigator from './navigation/AppNavigator';
 
-export default class App extends React.Component {
+class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -36,36 +25,9 @@ export default class App extends React.Component {
     if (!this.state.isReady) {
       return <AppLoading />;
     }
-
     return (
-      <Container>
-        <Header>
-          <Body>
-            <Title>Developer</Title>
-          </Body>
-        </Header>
-        <Content />
-        <Footer>
-          <FooterTab>
-            <Button vertical>
-              <Icon name="map" />
-              <Text>Map</Text>
-            </Button>
-            <Button vertical>
-              <Icon name="camera" />
-              <Text>Camera</Text>
-            </Button>
-            <Button vertical>
-              <Icon type="AntDesign" name="form" />
-              <Text>Post</Text>
-            </Button>
-            <Button vertical>
-              <Icon name="apps" />
-              <Text>Apps</Text>
-            </Button>
-          </FooterTab>
-        </Footer>
-      </Container>
+      <AppNavigator />
     );
   }
 }
+export default App
