@@ -13,14 +13,25 @@ https://docs.google.com/spreadsheets/d/1QHXfi9odKTb-zz8zFSPG3MI-DC7nFltMhjsUgnUa
 - **データ仕様書**
 
 ## 使用するモジュール
-- **Expo Module**
-- **react-native-navigation**
-- **react-native-maps**
-- **react-native-camera**
-- **react-native-vector-icons**
-- **react-native-lightbox**
-- **react-native-swiper**
-- **react-native-textinput-effects**
-- **lottie-react-native**
-- **react-native-acction-button**
-- **NativeBase**
+- **Expo Module**  
+https://docs.expo.io/versions/v35.0.0/sdk/overview/  
+- **react-navigation**  
+https://reactnavigation.org/docs/en/api-reference.html  
+- **react-native-maps**  
+https://github.com/react-native-community/react-native-maps  
+- **react-native-camera**  
+https://github.com/react-native-community/react-native-camera  
+- **react-native-vector-icons**  
+https://github.com/oblador/react-native-vector-icons  
+- **react-native-lightbox**  
+https://github.com/oblador/react-native-lightbox  
+- **react-native-swiper**  
+https://github.com/leecade/react-native-swiper  
+- **react-native-textinput-effects**  
+https://github.com/halilb/react-native-textinput-effects  
+- **lottie-react-native**  
+https://github.com/react-native-community/lottie-react-native  
+- **react-native-acction-button**  
+https://github.com/mastermoo/react-native-action-button  
+- **NativeBase**  
+https://docs.nativebase.io/  
