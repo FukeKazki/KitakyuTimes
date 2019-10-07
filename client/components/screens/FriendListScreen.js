@@ -3,26 +3,35 @@ import {
     Container,
     Header,
     Body,
+    Left,
+    Right,
     Content,
     Title,
     Text,
-    Footer,
-    FooterTab,
     Button,
     Icon,
 } from 'native-base';
+import { DrawerActions } from 'react-navigation-drawer';
 export default class Map extends React.Component {
     constructor(props) {
         super(props)
     }
     render() {
-        const { navigate } = this.props.navigation
+        const { navigate, dispatch } = this.props.navigation
         return (
             <Container>
                 <Header>
+                    <Left>
+                        <Button
+                            transparent
+                            onPress={() => dispatch(DrawerActions.toggleDrawer())}>
+                            <Icon name="menu" />
+                        </Button>
+                    </Left>
                     <Body>
                         <Title>FriendListScreen</Title>
                     </Body>
+                    <Right />
                 </Header>
                 <Content>
                 </Content>
