@@ -9,8 +9,7 @@ import {
     Icon,
 } from 'native-base'
 
-const Orginal_Header = props => {
-    const { dispatch, header_title } = props
+const Orginal_Header = ({ dispatch, header_title }) => {
     return (
         <Header>
             <Left>

@@ -6,7 +6,7 @@ import {
 } from 'native-base';
 import { DrawerActions } from 'react-navigation-drawer'
 import MapView from 'react-native-maps'
-import Header from '../organisms/header'
+import Header from '../organisms/Header'
 export default class Map extends React.Component {
     constructor(props) {
         super(props)
