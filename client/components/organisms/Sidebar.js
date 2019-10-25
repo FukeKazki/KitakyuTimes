@@ -1,7 +1,7 @@
 import React from "react";
-import { AppRegistry, Image, StatusBar } from "react-native";
-import { Container, Content, Text, List, ListItem } from "native-base";
-const routes = ["Map", "Camera", "AR", "EventList", "FriendList", "PostList", "Profile", "Ranking"];
+import { AppRegistry, Image, StatusBar } from "react-native"
+import { Container, Content, Text, List, ListItem } from "native-base"
+const routes = ["Map", "Camera", "AR", "EventList", "FriendList", "PostList", "Profile", "Ranking"]
 export default class SideBar extends React.Component {
     constructor(props) {
         super(props)
@@ -20,11 +20,11 @@ export default class SideBar extends React.Component {
                                     onPress={() => this.props.navigation.navigate(data)}>
                                     <Text>{data}</Text>
                                 </ListItem>
-                            );
+                            )
                         }}
                     />
                 </Content>
             </Container>
-        );
+        )
     }
 }

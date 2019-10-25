@@ -1,17 +1,12 @@
 import React from 'react'
+import { StyleSheet } from 'react-native'
 import {
     Container,
-    Header,
-    Body,
-    Left,
-    Right,
     Content,
-    Title,
-    Text,
-    Button,
-    Icon,
 } from 'native-base';
-import { DrawerActions } from 'react-navigation-drawer';
+import { DrawerActions } from 'react-navigation-drawer'
+import MapView from 'react-native-maps'
+import Header from '../organisms/Header'
 export default class Map extends React.Component {
     constructor(props) {
         super(props)
@@ -20,22 +15,25 @@ export default class Map extends React.Component {
         const { navigate, dispatch } = this.props.navigation
         return (
             <Container>
-                <Header>
-                    <Left>
-                        <Button
-                            transparent
-                            onPress={() => dispatch(DrawerActions.toggleDrawer())}>
-                            <Icon name="menu" />
-                        </Button>
-                    </Left>
-                    <Body>
-                        <Title>MapScreen</Title>
-                    </Body>
-                    <Right />
-                </Header>
-                <Content>
+                <Header dispatch={() => dispatch(DrawerActions.toggleDrawer())} header_title="MapScreen" />
+                <Content style={{ backgroundColor: 'pink' }}>
+                    <MapView
+                        style={styles.map}
+                        initialRegion={{
+                            latitude: 37.78825,
+                            longitude: -122.4324,
+                            latitudeDelta: 0.0922,
+                            longitudeDelta: 0.0421
+                        }}
+                    />
                 </Content>
             </Container>
         )
     }
 }
+
+const styles = StyleSheet.create({
+    map: {
+        height: 500,
+    }
+})

@@ -1,17 +1,10 @@
 import React from 'react'
 import {
     Container,
-    Header,
-    Body,
-    Left,
-    Right,
     Content,
-    Title,
-    Text,
-    Button,
-    Icon,
-} from 'native-base';
-import { DrawerActions } from 'react-navigation-drawer';
+} from 'native-base'
+import { DrawerActions } from 'react-navigation-drawer'
+import Header from '../organisms/Header'
 export default class Map extends React.Component {
     constructor(props) {
         super(props)
@@ -20,19 +13,7 @@ export default class Map extends React.Component {
         const { navigate, dispatch } = this.props.navigation
         return (
             <Container>
-                <Header>
-                    <Left>
-                        <Button
-                            transparent
-                            onPress={() => dispatch(DrawerActions.toggleDrawer())}>
-                            <Icon name="menu" />
-                        </Button>
-                    </Left>
-                    <Body>
-                        <Title>PostListScreen</Title>
-                    </Body>
-                    <Right />
-                </Header>
+                <Header dispatch={() => dispatch(DrawerActions.toggleDrawer())} header_title="ProfileScreen" />
                 <Content>
                 </Content>
             </Container>
