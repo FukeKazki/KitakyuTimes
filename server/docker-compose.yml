@@ -1,0 +1,7 @@
+version: '3'
+services:
+  apiserver:
+    build: ./node
+  # ポートの指定(ホスト:コンテナ)
+    ports:
+      - "3000:3000"
