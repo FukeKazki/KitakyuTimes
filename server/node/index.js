@@ -21,8 +21,8 @@ app.get('/', (req, res) => {
 /* ========================= */
 // ルーティング
 
-app.use('api/v1/user', user)
-app.use('api/v1/post', post)
+app.use('/api/v1/user', user)
+app.use('/api/v1/post', post)
 
 /* ========================= */
 // サーバ起動
