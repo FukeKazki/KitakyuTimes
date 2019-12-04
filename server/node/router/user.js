@@ -9,20 +9,35 @@ router.use((req, res, next) => {
     next()
 })
 
-router.get('/', (req, res) => {
-    res.send('hello user')
-})
+router.post('/signup', async (req, res) => {
+    /* ======= テストデータ =======
+    const data = {
+        user_handle: 'test_user_name',
+        user_mail_address: 'test@gmail.com',
+        user_password: 'password',
+        user_content: {},
+    }
+    */
+    console.log('req.body' + req.body)
+    const is_signup = await db.signUp(req.body)
+    if (is_signup) return res.send('success')
+    else return res.send('faile')
 
-router.post('/signup', (req, res) => {
-    res.send('hello signup')
+    // return res.send('success')
 })
 
 router.post('/login', (req, res) => {
+    console.log(req.body)
     res.send('hello login')
 })
 
-router.get('/info:user_handle', (req, res) => {
-    res.send('hello info')
+router.get('/info/:user_handle', async (req, res) => {
+    const {
+        user_handle
+    } = req.params
+    const user_content = await db.getUserContent(user_handle)
+    console.log(user_handle)
+    res.send(user_content)
 })
 
 module.exports = router

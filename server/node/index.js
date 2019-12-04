@@ -1,4 +1,5 @@
 import express from 'express'
+import bodyParser from 'body-parser'
 import user from './router/user'
 import post from './router/post'
 const app = express()
@@ -10,7 +11,9 @@ app.use((req, res, next) => {
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept")
     next()
 })
-
+app.use(bodyParser.urlencoded({
+    extended: true
+}))
 /* ========================= */
 // テスト
 app.get('/', (req, res) => {
