@@ -10,7 +10,7 @@ export default class Map extends React.Component {
         super(props)
     }
     render() {
-        const { navigate, dispatch } = this.props.navigation
+        const { dispatch } = this.props.navigation
         return (
             <Container>
                 <Header dispatch={() => dispatch(DrawerActions.toggleDrawer())} header_title="MapScreen" />
