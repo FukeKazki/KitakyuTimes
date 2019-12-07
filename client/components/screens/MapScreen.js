@@ -20,7 +20,7 @@ export default class Map extends React.Component {
             },
             markers: [
                 { latitude: 33.777, longitude: 130.60, type: "cat" },
-                { latitude: 33.7048298, longitude: 130.8184429, type: "cat" },
+                { latitude: 33.7048298, longitude: 130.8184429, type: "dog" },
             ],
         }
     }
