@@ -2,16 +2,11 @@ import React from 'react'
 import {
     Container,
     Content,
-    List,
-    ListItem,
-    Left,
-    Body,
-    Thumbnail,
-    Text
-
+    List
 } from 'native-base'
 import { DrawerActions } from 'react-navigation-drawer'
 import Header from '../organisms/Header'
+import ListItem from '../organisms/ListItem'
 export default class Map extends React.Component {
     constructor(props) {
         super(props)
@@ -23,94 +18,17 @@ export default class Map extends React.Component {
                 <Header dispatch={() => dispatch(DrawerActions.toggleDrawer())} header_title="FriendListScreen" />
                 <Content>
                     <List>                    
-                        <ListItem Thumnbail>
-                            <Left>
-                                <Thumbnail source={require('../../assets/square.png')} />
-                            </Left>
-                            <Body>
-                                <Text>KM</Text>
-                            </Body>
-                        </ListItem>
-                        <ListItem Thumnbail>
-                            <Left>
-                                <Thumbnail source={require('../../assets/square.png')} />
-                            </Left>
-                            <Body>
-                                <Text>saki</Text>
-                            </Body>
-                        </ListItem>                    
-                        <ListItem Thumnbail>
-                            <Left>
-                                <Thumbnail source={require('../../assets/square.png')} />
-                            </Left>
-                            <Body>
-                                <Text>kazu</Text>
-                            </Body>
-                        </ListItem>
-                        <ListItem Thumnbail>
-                            <Left>
-                                <Thumbnail source={require('../../assets/square.png')} />
-                            </Left>
-                            <Body>
-                                <Text>A.Yamada</Text>
-                            </Body>
-                        </ListItem>
-                        <ListItem Thumnbail>
-                            <Left>
-                                <Thumbnail source={require('../../assets/square.png')} />
-                            </Left>
-                            <Body>
-                                <Text>ritty</Text>
-                            </Body>
-                        </ListItem>
-                        <ListItem Thumnbail>
-                            <Left>
-                                <Thumbnail source={require('../../assets/square.png')} />
-                            </Left>
-                            <Body>
-                                <Text>tnk</Text>
-                            </Body>
-                        </ListItem>
-                        <ListItem Thumnbail>
-                            <Left>
-                                <Thumbnail source={require('../../assets/square.png')} />
-                            </Left>
-                            <Body>
-                                <Text>R</Text>
-                            </Body>
-                        </ListItem>
-                        <ListItem Thumnbail>
-                            <Left>
-                                <Thumbnail source={require('../../assets/square.png')} />
-                            </Left>
-                            <Body>
-                                <Text>Nana</Text>
-                            </Body>
-                        </ListItem>
-                        <ListItem Thumnbail>
-                            <Left>
-                                <Thumbnail source={require('../../assets/square.png')} />
-                            </Left>
-                            <Body>
-                                <Text>riku</Text>
-                            </Body>
-                        </ListItem>
-                        <ListItem Thumnbail>
-                            <Left>
-                                <Thumbnail source={require('../../assets/square.png')} />
-                            </Left>
-                            <Body>
-                                <Text>E_M</Text>
-                            </Body>
-                        </ListItem>
-                        <ListItem Thumnbail>
-                            <Left>
-                                <Thumbnail source={require('../../assets/square.png')} />
-                            </Left>
-                            <Body>
-                                <Text>yuzuka</Text>
-                            </Body>
-                        </ListItem>  
+                        <ListItem text="KM" />
+                        <ListItem text="saki" />
+                        <ListItem text="Kazu" />
+                        <ListItem text="A.Yamada" />
+                        <ListItem text="ritty" />
+                        <ListItem text="tnk" />
+                        <ListItem text="RL" />
+                        <ListItem text="NanA" />
+                        <ListItem text="riku" />
+                        <ListItem text="E_M" />
+                        <ListItem text="yuzuka" />
                     </List>
                 </Content>
             </Container>
