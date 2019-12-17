@@ -15,8 +15,7 @@ module.exports = class DB {
     async query(param) {
         try {
             const results = await this.pool.query(param)
-            this.pool.end()
-            return results
+            return Promise.resolve(results)
         } catch (err) {
             console.log(err)
         }
@@ -47,20 +46,15 @@ module.exports = class DB {
             return false
         }
     }
+
     async insert_location(data, lat, lang) {
         try {
             const sql = 'INSERT INTO location SET ?, location_geo = POINT(?,?)'
-            // ====== test datas ======
-            // const data = {
-            //     location_user_id: 1,
-            //     location_date: '2019-11-09 14:30:00.500'
-            // }
-            // const lat = 33.8845774
-            // const lang = 130.8794502
             const query = await this.pool.query(sql, [data, lat, lang])
-            console.log(query)
+            return Promise.resolve(true)
         } catch (err) {
             console.log(err)
+            return Promise.resolve(false)
         }
     }
 }
