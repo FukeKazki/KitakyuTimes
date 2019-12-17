@@ -14,6 +14,7 @@ app.use((req, res, next) => {
 app.use(bodyParser.urlencoded({
     extended: true
 }))
+app.use(bodyParser.json())
 /* ========================= */
 // テスト
 app.get('/', (req, res) => {
