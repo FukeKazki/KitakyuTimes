@@ -23,10 +23,12 @@ CREATE TABLE IF NOT EXISTS kt.post(
 CREATE TABLE IF NOT EXISTS kt.location(
   `location_id` INT (11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
   `location_user_id` INT (11) NOT NULL,
+  `location_content` JSON NOT NULL,
   `location_geo` GEOMETRY NOT NULL,
   `location_date` DATETIME NOT NULL,
   CONSTRAINT fk_location_user_id
     FOREIGN KEY (`location_user_id`)
     REFERENCES `user` (`user_id`)
-    ON DELETE RESTRICT ON UPDATE RESTRICT
+    ON DELETE RESTRICT ON UPDATE RESTRICT,
+  CHECK (JSON_VALID(location_content))
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
