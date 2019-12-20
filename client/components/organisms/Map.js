@@ -6,6 +6,7 @@ const Map = ({ region, markers, posts }) => {
         <MapView
             style={{ flex: 1 }}
             region={region}
+            mapType="hybrid"
         >
             {posts.map((post, idx) => {
                 return (
@@ -17,6 +18,7 @@ const Map = ({ region, markers, posts }) => {
                         }}
                         title={post.post_content.title}
                         description={post.post_content.description}
+                        flat={true}
                     />
                 )
             })}
