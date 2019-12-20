@@ -8,7 +8,7 @@ import * as Location from 'expo-location'
 import * as Permissions from 'expo-permissions'
 import axios from 'axios'
 
-axios.defaults.baseURL = 'https://31aff36a.ngrok.io/api/v1'
+axios.defaults.baseURL = 'https://e6e0ac62.ngrok.io/api/v1'
 
 export default class Map extends React.Component {
     constructor(props) {
@@ -26,6 +26,8 @@ export default class Map extends React.Component {
                 { post_id: 1, post_user_id: 1, post_content: { title: '2019秋企画展　いろ色ひろがる印刷展', description: '「いろ色ひろがる印刷展」では、現代の印刷技術を中心に取り上げ、印刷の歴史、工場での印刷、多種多様な色と紙から生まれるアートとしてのポスターも展示します。見るだけでも楽しい色見本や不思議な見え方の特殊印刷、手作り感が今なお人気の活版印刷をとりあげるコーナーも設け、幅広い印刷技術についてご紹介します。印刷技術の応用でこれから生活や学び方法の変化、そして記録媒体としての「印刷」が担う文化継承の一端に実際に触れ、体験していただきます。' }, post_geo: [33.8689236, 130.8056444], post_date: '2019-12-26' },
                 { post_id: 1, post_user_id: 1, post_content: { title: 'アトリエ ハーモニー　作品展', description: '木の実やスパイスを使ったリースやオーナメントの展示販売のほか、ドアベルや香り袋の手作り体験もできるイベント「アトリエ ハーモニー 作品展」を開催します。' }, post_geo: [33.9057166, 130.9313072], post_date: '2019-12-26' },
                 { post_id: 1, post_user_id: 1, post_content: { title: 'KPF（北九州ポップカルチャーフェスティバル）2019', description: 'アニメ・マンガなどポップカルチャーをテーマにした九州最大級のイベント。声優トークショー、アニソンライブ、アニメ・マンガ作品展示、クリエイティブ体験、コスプレイベント、痛車展示など、内容盛りだくさんです。' }, post_geo: [33.889573, 130.8830893], post_date: '2019-12-26' },
+                { post_id: 1, post_user_id: 1, post_content: { title: '到津の森公園 クリスマスフェア', description: '園内にクリスマス音楽が流れ、クリスマスリースなどのデコレーションが各所に登場します。園内にクリスマス音楽が流れ、クリスマスリースなどのデコレーションが各所に登場します。' }, post_geo: [33.8745741, 130.8439876], post_date: '2019-12-26' },
+                { post_id: 1, post_user_id: 1, post_content: { title: 'イルミネーション2019門司港レトロ浪漫灯彩', description: '淡く輝く光が懐かしく幻想的な冬の門司港。ツリーイルミネーションや歴史的建築物のライトアップは大正浪漫を感じさせてくれます。点灯式からスタートし、期間中にはクリスマスコンサートやカウントダウンイベントなどを開催します。' }, post_geo: [33.9460715, 130.9623351], post_date: '2019-12-26' },
             ],
         }
     }
@@ -73,6 +75,8 @@ export default class Map extends React.Component {
                 longitudeDelta: 0.2,
             },
         })
+        console.log('get location ')
+        console.log(location.coords)
     }
 
     render() {
