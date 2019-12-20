@@ -8,7 +8,7 @@ import * as Location from 'expo-location'
 import * as Permissions from 'expo-permissions'
 import axios from 'axios'
 
-axios.defaults.baseURL = 'https://e6e0ac62.ngrok.io/api/v1'
+aults.baseURL = 'https://e9e0ac62.ngrok.io/api/v1'
 
 export default class Map extends React.Component {
     constructor(props) {
