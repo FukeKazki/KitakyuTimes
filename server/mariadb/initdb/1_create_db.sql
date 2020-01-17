@@ -1,0 +1,2 @@
+CREATE DATABASE IF NOT EXISTS kt;
+GRANT ALL PRIVILEGES ON `kt`.* TO 'challecare'@'%';
